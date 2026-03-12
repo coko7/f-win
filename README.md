@@ -1,4 +1,4 @@
-# ✨ f-win
+# 🤬 f-win
 
 A handy script to "*fix*" Windows by installing decent CLIs and apps.
 
@@ -6,7 +6,13 @@ A handy script to "*fix*" Windows by installing decent CLIs and apps.
 
 Run it with one command:
 ```ps1
-irm https://get.coko7.fr/fwin.ps1 | iex
+irm "https://fwin.coko7.fr" | iex
+```
+> [!NOTE]
+> [fwin.coko7.fr](https://fwin.coko7.fr) is just a redirect to this git repo.
+> If you do not trust it, feel free to use the command below instead:
+```ps1
+irm "https://raw.githubusercontent.com/coko7/f-win/refs/heads/main/fwin.ps1" | iex
 ```
 
 ## 🐛 Issues
@@ -19,7 +25,8 @@ to install 7-zip manually via copying MSI and then instructing scoop to use an e
 ```ps1
 scoop config use_external_7zip true
 ```
-For more info: https://github.com/ScoopInstaller/Scoop/discussions/6553
+> [!TIP]
+> Learn more here: https://github.com/ScoopInstaller/Scoop/discussions/6553
 
 ### Problem with schannel
 
@@ -32,4 +39,12 @@ You may want to switch the git SSL backend to OpenSSL:
 ```ps1
 git config --global http.sslBackend openssl
 ```
-Learn more here: https://stackoverflow.com/questions/45556189/git-the-revocation-function-was-unable-to-check-revocation-for-the-certificate
+> [!TIP]
+> Learn more here: https://stackoverflow.com/questions/45556189/git-the-revocation-function-was-unable-to-check-revocation-for-the-certificate
+
+## 🚀 Better alternatives
+
+For a more complete solution in the same spirit, check out: [ctt/winutil](https://github.com/ChrisTitusTech/winutil).
+It's way better and has many customizations options beyond just installing apps and CLIs.
+
+`fwin` is **my personal** installation script to setup all the tools I need in one command.
