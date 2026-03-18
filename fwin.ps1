@@ -80,6 +80,7 @@ Ensure-Installed main/bat # like UNIX cat but fancier
 Ensure-Installed main/delta # a syntax-highlighting pager for git, diff, grep, and blame output
 Ensure-Installed main/fd # modern alternative to UNIX find command
 Ensure-Installed main/xh # modern alternative to cURL
+Ensure-Installed main/jq # command-line JSON processor 
 
 # Finally, lets install some decent GUI apps
 Ensure-Installed extras/windows-terminal
