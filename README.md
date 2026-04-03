@@ -1,5 +1,7 @@
 # 🤬 f-win
 
+![](./tux-smashing-with-the-foss-wrench.png)
+
 A handy script to "*fix*" Windows by installing decent CLIs and apps.
 
 ## 🛠️ Setup / Usage
