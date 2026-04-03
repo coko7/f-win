@@ -6,7 +6,6 @@
 #
 # "Windows sucks ass, lets fix it for good." ~ @me
 #
-# Version 0.1.0
 # Author: @coko7
 
 # First, we install Scoop because for some fucking reason, some versions of Windows server do not come with winget by default.
@@ -81,6 +80,7 @@ Ensure-Installed main/delta # a syntax-highlighting pager for git, diff, grep, a
 Ensure-Installed main/fd # modern alternative to UNIX find command
 Ensure-Installed main/xh # modern alternative to cURL
 Ensure-Installed main/jq # command-line JSON processor 
+Ensure-Installed main/zellij # terminal multiplexer
 
 # Finally, lets install some decent GUI apps
 Ensure-Installed extras/windows-terminal
