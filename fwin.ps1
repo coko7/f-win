@@ -78,8 +78,9 @@ Ensure-Installed main/fzf # the greatest command-line fuzzy finder
 Ensure-Installed main/bat # like UNIX cat but fancier
 Ensure-Installed main/delta # a syntax-highlighting pager for git, diff, grep, and blame output
 Ensure-Installed main/fd # modern alternative to UNIX find command
+Ensure-Installed main/eza # modern alternative to ls
 Ensure-Installed main/xh # modern alternative to cURL
-Ensure-Installed main/jq # command-line JSON processor 
+Ensure-Installed main/jq # command-line JSON processor
 Ensure-Installed main/zellij # terminal multiplexer
 
 # Finally, lets install some decent GUI apps
