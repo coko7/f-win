@@ -54,22 +54,31 @@ Ensure-Installed main/git
 Ensure-Installed main/neovim
 Ensure-Installed main/edit
 
-# Now we install atuin to easily fuzzy search shell history
-if (!(scoop which atuin))
+# create PowerShell profile if missing
+if (-not (Test-Path -Path $PROFILE))
 {
-    Ensure-Installed main/atuin
-    if (-not (Test-Path -Path $PROFILE))
-    {
-        New-Item -ItemType File -Path $PROFILE -Force | Out-Null
-    }
-    Write-Output 'atuin init powershell | Out-String | Invoke-Expression' >> $PROFILE
+    New-Item -ItemType File -Path $PROFILE -Force | Out-Null
 }
 
-# Now we setup zoxide to magically traverse your fs
+# cd is alright but zoxide is better:
 if (!(scoop which zoxide))
 {
     Ensure-Installed main/zoxide
     Write-Output 'Invoke-Expression (& { (zoxide init powershell | Out-String) })' >> $PROFILE
+}
+
+# History managment is a must and atuin is the perfect solution to that:
+if (!(scoop which atuin))
+{
+    Ensure-Installed main/atuin
+    Write-Output 'atuin init powershell | Out-String | Invoke-Expression' >> $PROFILE
+}
+
+# Finally, lets get a decent shell prompt:
+if (!(scoop which starship))
+{
+    Ensure-Installed main/starship
+    Write-Output 'Invoke-Expression (&starship init powershell)' >> $PROFILE
 }
 
 # Here are some more fire CLIs:
@@ -83,7 +92,7 @@ Ensure-Installed main/xh # modern alternative to cURL
 Ensure-Installed main/jq # command-line JSON processor
 Ensure-Installed main/zellij # terminal multiplexer
 
-# Finally, lets install some decent GUI apps
+# Maybe we install some decent GUI apps as well?
 Ensure-Installed extras/windows-terminal
 
 Write-Host '🚀 Congratulations. Your Windows dev setup is now a tiny bit better ✨'
